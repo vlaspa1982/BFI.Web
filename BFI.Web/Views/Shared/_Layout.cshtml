@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BFI.Web.styles.css" asp-append-version="true" />
+   
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/images/@(Model.Type).png" width="160px" class="img-fluid"></img></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+               
+            </div>
+        </nav>
+    </header>
+    <div class="container text-body-emphasis box-shadow px-sm-5 bg-white">
+        <main role="main" class="pb-5 pt-3 ">
+            @RenderBody()
+           
+        </main>
+       
+    </div>
+    <p style="height:35px">
+
+    </p>
+    @* <footer class=" border-top footer pb-2 text-muted">
+        <div class=" container">
+            <div class="row">
+
+                <div class="col-4 col-sm-2">
+                    <img src="/images/rm.svg" width="110px" class="img-fluid"></img>
+                </div>
+                <div class="col-4 col-sm-2">
+                    <img src="/images/sup.svg" width="110px" class="img-fluid"></img>
+                </div>
+                <div class="col-4 col-sm-2">
+                    <img src="/images/frap.svg" width="110px" class="img-fluid"></img>
+                </div>
+
+                <div class="col-12 col-sm-6 ">
+                    <div class="row float-end">
+                        <div class="col-6 pt-3" style="font-size: 0.7rem; line-height: 1.5;text-align: right;">
+                            VŠECHNA PRÁVA VYHRAZENA<br />
+                            ALL RIGHTS RESERVED<br />
+
+                        </div>
+                        <div class="col-6">
+                            <img style="max-width: 9rem;" src="/images/@(Model.Type).png" width="180px" "></img>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

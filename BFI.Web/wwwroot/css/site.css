@@ -1,0 +1,54 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    color: #898989;
+}
+
+.text-uppercase {
+    color: #67706f;
+}
+
+.text-danger {
+    color: #d7432b;
+}
+.iconRotation {
+    background-image: url(Images/chevron-right.svg);
+    background-size: cover;
+}
+
+
+.accordion-button:not(.collapsed) {
+    background-color: white;
+    box-shadow: none;
+}
+    .accordion-button:not(.collapsed)::after {
+        transform: rotate(0deg);
+        border:hidden;
+    }
+
+.accordion-button:focus {
+    background-color:white;
+    box-shadow:none;
+}
+.accordion-button::after {
+    transform: rotate(-90deg);
+    margin-left:0;
+}
